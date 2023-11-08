@@ -1,0 +1,63 @@
+body
+{
+    background-size: cover;
+    /*display: flex;
+    justify-content: center;*/
+    position: relative;
+    background-image: url(https://thumbs.dreamstime.com/b/abstract-blur-background-blue-green-mesh-gradient-color-power-pattern-you-presentation-design-wallpaper-abstract-blur-139542205.jpg);
+}
+.search
+{
+    margin-left: 1000px;
+    margin-top: 50px;
+}
+h1
+{
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px 2px 2px white;
+}
+h2,a
+{
+    color: black;
+    font-weight: bold;  
+    text-decoration:none ;
+    text-align: center;
+}
+.maincontainer
+{
+    display: flex;
+    height: 620px;
+    width: 1300px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+.flex-item
+{
+    height: 300px;
+    width: 350px;
+    margin-bottom: 20px;
+    background-color: white;
+    margin-left: 40px;
+    border-radius: 20px;
+}
+.cardimg
+{
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+}
+button
+{
+    background-color: blue; 
+    color: white;
+    border: 1px solid black;
+    height: 30px;
+    border-radius: 10px;
+}
+input
+{
+    height: 25px;
+    border-radius: 10px;
+}
