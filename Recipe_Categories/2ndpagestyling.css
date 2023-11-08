@@ -44,4 +44,5 @@ h2,a
     width: 350px;
     height: 300px;
     border-radius: 20px;
+    object-fit: cover;
 }
