@@ -1,0 +1,125 @@
+/*body
+{
+    background-color: pink;
+    background-size: cover;
+    position: relative;
+}
+h1
+{
+    text-align: center;
+}
+.img
+{
+    display: flex;
+    justify-content: center;
+}
+.flex-container
+{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 215px;
+    margin-right: ;
+}
+.ingredients
+{
+    margin-left: 50px;
+}
+h1,h2
+{
+    text-decoration:underline;
+}
+.checked 
+{
+    color: orange;
+}*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(87, 67, 157);
+}
+h2{
+    position: relative;
+    font-size: 5em;
+    left: 320px;
+    color: #222;
+    letter-spacing: 0.1em;
+}
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    animation: anim 8s linear infinite;
+    filter: drop-shadow(0 0 5px #fff) 
+    drop-shadow(0 0 10px #fff);
+}
+
+@keyframes anim{
+    0%, 10%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+}
+img
+{
+    position: absolute;
+    top: 150px;
+    left: 250px;
+    
+}
+p
+{
+    color: white;
+}
+.ingredients
+{
+    position: absolute;
+    left: 250px;
+    top: 770px;
+}
+.Preparation
+{
+    position: absolute;
+    right: 250px;
+    top: 770px;
+}
+.ref1
+{
+    position: absolute;
+    left: 50px;
+    color: white;
+    top: 1250px;
+}
+.ref2
+{
+    position: absolute;
+    left: 750px;
+    color: white;
+    top: 1250px;
+}
+h3
+{
+    color: white;
+    text-decoration: underline;
+}
+h1
+{
+    position: absolute;
+    left: 250px;
+    color: white;
+    top: 1200px;
+}
