@@ -1,0 +1,163 @@
+body
+{
+    position: relative;
+    background-size: cover;
+    background-attachment:fixed ;
+    background-image: url(https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?size=626&ext=jpg&ga=GA1.1.1934222718.1699110633&semt=ais);
+}
+.image
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img
+{
+    width: 300px;
+}
+h1
+{
+    text-align: center;
+    font-size: 40px;
+    font-family: cursive;
+    color: white;
+}
+.links
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: cursive;
+}
+a:hover
+{
+    background-color: yellowgreen;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+.headings
+{
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    left: 350px;
+    flex-direction: column;
+}
+h2
+{
+    font-size: 30px;
+    font-family: cursive;
+    color: white;
+    text-decoration: underline;
+}
+.head1
+{
+    width: 700px;
+    height: 300px;
+}
+.head2
+{
+    width: 700px;
+    height: 500px;
+}
+.head3
+{
+    width: 700px;
+    height: 300px;
+}
+p
+{
+    font-weight: lighter;
+    font-size: 18px;
+    font-family: cursive;
+    color: white;
+}
+.icons
+{
+    display: flex;
+    height: 500px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    justify-content: center;
+}
+.icon{
+    position:absolute;
+    left:30px;
+    top:20px;
+    width:100px;
+    height: 100px;
+}
+.icon2
+{
+    position:absolute;
+    left:30px;
+    top:180px;
+    width:80px;
+    height: 80px;
+}
+.icon3
+{
+    position:absolute;
+    left:30px;
+    top:330px;
+    width:70px;
+    height: 70px;
+}
+.icon4
+{
+    position:absolute;
+    left:30px;
+    top:470px;
+    width:70px;
+    height: 70px;
+    border-radius: 70px;
+}
+h3
+{
+    position: absolute;
+    left: 50px;
+    top: 250px;
+    color: white;
+}
+.cat{
+    position: absolute;
+    left: 30px;
+    top: 390px;
+    color: white;
+}
+.contact
+{
+    position: absolute;
+    left: 30px;
+    top: 540px;
+    color: white;
+}
+.spinner-container {
+    position:absolute;
+    width: 80px;
+    height: 80px;
+}
+.spinner {
+    border-top: 6px solid white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 26px;
+    left: 35px;
+    margin-top: -20px;
+    margin-left: -20px;
+    animation: spin 5s linear infinite;
+}
+@keyframes spin {
+    0%{
+        transform:rotate(0deg);
+    }
+     100% {transform:rotate(360deg);
+     }
+}
