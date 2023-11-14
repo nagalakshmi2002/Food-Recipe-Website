@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Veg Pulao</title>
+     <!-- <link href="vegpulao.css" rel="stylesheet"> -->
+     <style>
+
+     body{
+        margin: 0;
+        padding: 0; 
+        background-color:rgb(87, 67, 157);
+        flex-direction: column;
+        min-height: 310ch;
+        position:relative;  
+        background-size:cover;
+        background-attachment: fixed;
+    
+    } 
+    header {
+                background-color:none;
+                position: relative;
+                display:flex;
+                color: #fff;
+                height: 150px;
+                top:0px;
+                background-image: url('https://trisya.com/myimg/child/soft_devlop.gif');
+                background-position:cover;
+            
+            }
+            main {
+                text-align: center;
+                padding: 20px;
+                flex: 1px; /* Allow main content to expand */
+            }
+            footer {
+                background-color:none;
+                color: #fff;
+                text-align: center;
+                position:absolute;
+                padding: 10px 0px;
+                margin-top: auto;
+                width: 100%;
+                height:50px;
+                bottom:0px;
+                background-image: url('https://trisya.com/myimg/child/soft_devlop.gif');
+            }
+    .image{
+        position:absolute;
+        left:25px;
+        top:20px;
+        width:100px;
+        height: 100px;
+    }
+    .amla
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .main-section-image {
+        position: absolute;
+        height: 500px;
+        cursor: pointer;
+        width: 750px;
+        transition: transform 0.2s ease-out;
+    }
+    
+    .main-section-image:hover {
+        transform: scale(1.1);
+    }
+    .flex-conatiner{
+        position:absolute;
+        top:100px;
+        left:800px;
+        height: 50px;
+        width:362px;
+        display:flex;
+        border-radius: 50px;
+        background-color:none
+    ;
+        flex-direction: row;
+    }
+    .flex-button{
+     margin:10px;
+     padding:5px;
+     border-radius:40px;
+     cursor:pointer;
+     text-align:center;
+     /*transition: transform 0.1s ease-out, background-color 0.3s ease; */
+    }
+    .flex-button:active{
+        transform: scale(0.9);
+    }
+    .flex-button:hover {
+       background-color: aqua;
+       animation: blink 1s infinite;
+    
+    }
+    .spinner-container {
+        position:absolute;
+        width: 80px;
+        height: 80px;
+    }
+    .spinner {
+        border-top: 6px solid white;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 26px;
+        left: 35px;
+        margin-top: -20px;
+        margin-left: -20px;
+        animation: spin 5s linear infinite;
+    }
+    @keyframes spin {
+        0%{
+            transform:rotate(0deg);
+        }
+         100% {transform:rotate(360deg);
+         }
+          /*  0% { background-color: red; transform: rotate(0deg); }
+            25% { background-color: blue; transform: rotate(90deg); }
+            50% { background-color: green; transform: rotate(180deg); }
+            75% { background-color: yellow; transform: rotate(270deg); }
+            100% { background-color: red; transform: rotate(360deg); }*/
+    }
+    h1{
+        position: relative;
+        font-size: 4.0em;
+        left: 350px;
+        color: #222;
+        letter-spacing: 0.1em;
+        text-align: center;
+        margin-top: 10px;
+    }
+    h1::before{
+        content: attr(data-text);
+        position: absolute;
+        color: #fff;
+        width: 50px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid #fff;
+        animation: anim 5s linear infinite;
+        filter: drop-shadow(0 0 5px #fff) 
+        drop-shadow(0 0 10px #fff);
+    }
+    @keyframes anim{
+        0%, 10%, 100%{
+            width: 0;
+        }
+        70%, 90%{
+            width:95%;
+        }
+    }
+    h2 {
+                position: relative;
+                text-align: center;
+                font-size: 3em;
+                color: #fff; /* Text color */
+                top:0 px;
+                left:0 px;
+                letter-spacing: 0em;
+                text-shadow: 0 0 10px #0a0000, 0 0 20px #0a0000, 0 0 30px #141314, 0 0 40px #141314, 0 0 50px #141314, 0 0 60px #141314, 0 0 70px #141314; /* Glowing effect */
+            }
+    
+            h2 span {
+                display: inline-block;
+                opacity: 0;
+                animation: fadeIn 3s infinite;
+            }
+    
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+            }
+    p
+    {
+        color: white;
+    }
+    .ingredients
+    {
+        position: absolute;
+        left: 250px;
+        text-align: left;
+        text-shadow: 0px 1px 2px #000;
+        top: 800px;
+    }
+    .Preparation
+    {
+        position: absolute;
+        right: 150px;
+        text-align: left;
+        text-shadow: 0px 1px 2px #000;
+        top: 800px;
+    }
+    .ref1
+            {
+                position:absolute;
+                left: 50px;
+                color: white;
+                bottom:520px;
+            }
+            .ref2
+            {
+                position: absolute;
+                right:50px;
+                color: white;
+                bottom:520px;
+            }
+            h3
+            {
+                color: white;
+                text-decoration: underline;
+            }
+            h4
+            {
+                position: absolute;
+                left: 350px;
+                text-shadow: 1px 2px 3px #000;
+                font-size:20px;
+                color: white;
+                bottom:900px;
+            }
+    .comment
+    {
+        position: absolute;
+        bottom:150px;
+        left: 70px;
+        display: flex;
+        /*border: 1px solid white;*/
+        -webkit-box-shadow:0px 0px 18px 0px rgba(45,255,196,0.61);
+        -moz-box-shadow: 0px 0px 18px 0px rgba(45,255,196,0.61);
+        box-shadow: 0px 0px 18px 0px rgba(45,255,196,0.61);
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        height: 300px;
+    }
+    h5
+    {
+        color: white;
+    }
+    button
+    {
+        color: white;
+        width: 50px;
+        height: 30px;
+        background-color: gray;
+    }
+    </style>
+</head>
+<header>
+<body>
+<h1 data-text="&nbsp;FOOD FUSION &nbsp;">&nbsp;FOOD FUSION &nbsp;</h1>
+<div class="spinner-conatiner"></div>
+<div class="spinner"></div>
+<div class="image"></div>
+<img class="image" src="https://thephoca.com/wp-content/themes/woctheme/assets/images/loading.gif" >
+<div class="flex-conatiner">
+    <div class="flex-button"><a style="text-decoration: none;color:white" href="Mainpage.html">Home</a></div>
+    <div class="flex-button"style ="font-style:Times New Roman;"><a style="text-decoration: none;color:white" href="2ndpage.html">Categories</a></div>
+    <div class="flex-button"style ="font-style:Times New Roman;"><a style="text-decoration: none;color:white" href="aboutus.html">About Us</a></div>
+    <div class="flex-button" style ="font-style:Times New Roman;"><a style="text-decoration: none;color:white" href="contactus.html">Contact Us</a></div>
+</div>
+</header>
+<main><!--changes eed to be done-->
+<h2>
+<span>V</span>
+<span>e</span>
+<span>g</span>
+<span> </span>
+<span>P</span>
+<span>u</span>
+<span>l</span>
+<span>a</span>
+<span>o</span>
+</h2>
+<div class="amla">
+    <img class="main-section-image" src="https://thumbs.dreamstime.com/b/traditional-hyderabadi-vegetable-veg-dum-biryani-mixed-veggies-served-raita-selective-focus-223723116.jpg">
+</div> 
+<div class="flex-container"></div> 
+<div class="ingredients">
+    <h3>Ingredients:</h3>
+    <p>Basmati rice:1kg</p>
+    <p>Oil:250 gm</p>
+    <p>Onion:400 gm</p>
+    <p>Cinnamon:1 gm</p>
+    <p>Cardamom:1 gm</p>
+    <p>Clove:1 gm</p>
+    <p>Coriander Leaves:1/2 hand</p>
+    <p>Mint Leaves:1/2 hand</p>
+    <p>Ginger:50 gm</p>
+    <p>Garlic:50 gm</p>
+    <p>Red Chili powder:2 tablespoon</p>
+    <p>Salt:3 tablespoon</p>
+    <p>Green Chili:3</p>
+    <p>Tomato:400 gm</p>
+    <p>Beans:100 gm</p>
+    <p>Carrot:200 gm</p>
+    <p>Green peas:50 gm</p>
+    <p>Potato:1/2 kg</p>
+    <p>Water:1 and half litre</p>
+</div>
+<div class="Preparation">
+    <ul style="list-style-type: 1;">
+        <h3>Preparation:</h3>
+        <p>Prepare ingredients as mentioned in the list.</p>
+        <p>Heat the oil in a pan, add the cinnamon,</p> 
+        <p>cloves, green cardamom, star anise, </p>
+        <p>peppercorns and black cardamom. </p>
+        <p>Add the onions and sauté till they turn golden-brown.</p>
+        <p>Add the ginger-garlic paste and </p>
+        <p>stir-fry till the raw smell is gone.</p>
+        <p>Add the red chilli powder,turmeric powder,</p> 
+        <p>and coriander powder and sauté for a minute.</p>
+        <p>Add the tomatoes and cook till they are soft.</p>
+        <p>Add all the vegetables and mix well.</p>
+        <p>Add the water,mint leaves and coriander leaves.</p> 
+        <p>Mix well and add salt to taste. </p>
+        <p>Bring to boil and add rice.</p>
+        <p>Reduce flame to the lowest and cook covered</p>
+        <p>till both the rice and vegetables are done.</p>
+        <p>Serve hot..</p>
+    </ul>
+</div>
+    <h4>References:</h4>
+    <div class="ref1">
+        <h5>Reference 1</h5>
+        <iframe width="480" height="300" src="https://www.youtube.com/embed/ANrOn7sss6A?si=AWENhg6_n6g2EnL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <!--<div class="ref2">
+        <a href="https://youtu.be/3bZ6r5W4sDk?si=uOumc0FDRo0YPjaI" name="reference2"><h3>Reference 2</h3></a>
+    </div>-->
+    <div class="ref2">
+        <h5>Reference 2</h5>
+        <iframe width="480" height="300" src="https://www.youtube.com/embed/uNXc8uH1AMo?si=RsUyfcEnW4TIGeHm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="comment">
+        <form>
+            <h5>First Name</h5>
+            <input type="text" placeholder="Enter your name" required size="20">
+            <h5>Email</h5>
+            <input type="email" placeholder="Enter your email" required size="20">
+            <h5>Your Comment</h5>
+            <input type="text" placeholder="Your comments" required height="5"size="40">
+            <p></p>
+            <button class="submit" type="submit">Send</button>
+        </form>
+    </div>
+
+   <!-- <div class="flex-conatiner1">
+    <div class="name">Or You May Order<span style="font-size:30px;">&#128521</span>
+        </div>
+    
+    <div class="image-row">
+        <a href="https://www.swiggy.com/">
+            <img src="https://cdn.worldvectorlogo.com/logos/swiggy-logo.svg">
+        </a>
+       <a herf="https://www.zomato.com/">
+        <img src="https://cdn.worldvectorlogo.com/logos/zomato-2.svg">
+    </a>
+    <a herf ="https://www.ubereats.com/">
+        <img src="https://cdn.worldvectorlogo.com/logos/uber-eats-1.svg">
+    </a>-->
+        
+    </div>
+        
+</main>
+<footer> 
+    &copy; 2023 Food fusion.com
+</footer>
+
+</body>
+</html>
