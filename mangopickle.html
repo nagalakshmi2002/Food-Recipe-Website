@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Mango Pickle</title>
+       <!----<link href="recipestyle.css" rel="stylesheet">-->
+       <style>
+        
+        body{
+    margin: 0;
+    padding: 0; 
+    background-color:rgb(87, 67, 157);
+    flex-direction: column;
+    min-height: 300ch;
+    position:relative;  
+    background-size:cover;
+    background-attachment: fixed;
+
+} 
+header {
+            background-color:none;
+            position: relative;
+            display:flex;
+            color: #fff;
+            height: 150px;
+            top:0px;
+            background-image: url('https://trisya.com/myimg/child/soft_devlop.gif');
+            background-position:cover;
+        
+        }
+        main {
+            text-align: center;
+            padding: 20px;
+            flex: 1px; /* Allow main content to expand */
+        }
+        footer {
+            background-color:none;
+            color: #fff;
+            text-align: center;
+            position:absolute;
+            padding: 10px 0px;
+            margin-top: auto;
+            width: 100%;
+            height:50px;
+            bottom:0px;
+            background-image: url('https://trisya.com/myimg/child/soft_devlop.gif');
+        }
+.image{
+    position:absolute;
+    left:25px;
+    top:20px;
+    width:100px;
+    height: 100px;
+}
+.amla
+{
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+}
+img
+{
+    position: absolute;
+    /*left: 250px;*/
+    height:500px;
+    cursor:pointer;
+    width:750px;
+    transition: transform 0.2s ease-out;
+}
+img:hover {
+    
+    transform: scale(1.1);
+}
+.flex-conatiner{
+    position:absolute;
+    top:100px;
+    left:900px;
+    height: 50px;
+    width:362px;
+    display:flex;
+    border-radius: 50px;
+    background-color:none;
+    flex-direction: row;
+}
+.flex-button{
+ margin:10px;
+ padding:5px;
+ border-radius:40px;
+ cursor:pointer;
+ text-align:center;
+ transition: transform 0.1s ease-out, background-color 0.3s ease; 
+}
+.flex-button:active{
+    transform: scale(0.9);
+}
+.flex-button:hover {
+   background-color: aqua;
+   animation: blink 1s infinite;
+
+}
+.spinner-container {
+    position:absolute;
+    width: 80px;
+    height: 80px;
+}
+.spinner {
+    border-top: 6px solid white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 26px;
+    left: 35px;
+    margin-top: -20px;
+    margin-left: -20px;
+    animation: spin 5s linear infinite;
+}
+@keyframes spin {
+    0%{
+        transform:rotate(0deg);
+    }
+     100% {transform:rotate(360deg);
+     }
+      /*  0% { background-color: red; transform: rotate(0deg); }
+        25% { background-color: blue; transform: rotate(90deg); }
+        50% { background-color: green; transform: rotate(180deg); }
+        75% { background-color: yellow; transform: rotate(270deg); }
+        100% { background-color: red; transform: rotate(360deg); }*/
+}
+h1{
+    position: relative;
+    font-size: 4.0em;
+    left: 350px;
+    color: #222;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 10px;
+}
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    animation: anim 5s linear infinite;
+    filter: drop-shadow(0 0 5px #fff) 
+    drop-shadow(0 0 10px #fff);
+}
+@keyframes anim{
+    0%, 10%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width:95%;
+    }
+}
+h2 {
+            position: relative;
+            text-align: center;
+            font-size: 3em;
+            color: #fff; /* Text color */
+            top:0 px;
+            left:0 px;
+            letter-spacing: 0em;
+            text-shadow: 0 0 10px #0a0000, 0 0 20px #0a0000, 0 0 30px #141314, 0 0 40px #141314, 0 0 50px #141314, 0 0 60px #141314, 0 0 70px #141314; /* Glowing effect */
+        }
+
+        h2 span {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeIn 3s infinite;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+        }
+p
+{
+    color: white;
+}
+.ingredients
+{
+    position: absolute;
+    left: 300px;
+    text-align: left;
+    top: 800px;
+}
+.Preparation
+{
+    position: absolute;
+    right: 250px;
+    text-align: left;
+    top: 800px;
+}
+.ref1
+{
+    position:absolute;
+    left: 70px;
+    color: white;
+    top:1470px;
+}
+.ref2
+{
+    position: absolute;
+    /*left: 750px;*/
+    right: 70px;
+    color: white;
+    top: 1470px;
+}
+h3
+{
+    color: white;
+    text-decoration: underline;
+}
+h4
+{
+    position: absolute;
+    left: 350px;
+    text-shadow: 1px 2px 3px #000;
+    font-size:20px;
+    color: white;
+    top: 1420px;
+}
+.comment
+{
+    position: absolute;
+    top: 1950px;
+    left: 70px;
+    display: flex;
+    /*border: 1px solid white;*/
+    -webkit-box-shadow:0px 0px 18px 0px rgba(45,255,196,0.61);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(45,255,196,0.61);
+    box-shadow: 0px 0px 18px 0px rgba(45,255,196,0.61);
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 300px;
+}
+h5
+{
+    color: white;
+}
+button
+{
+    color: white;
+    width: 50px;
+    height: 30px;
+    background-color: gray;
+}
+       </style>
+</head>
+<header>
+<body>
+<h1 data-text="&nbsp;FOOD FUSION &nbsp;">&nbsp;FOOD FUSION &nbsp;</h1>
+<div class="spinner-conatiner"></div>
+<div class="spinner"></div>
+<div clss="image"></div>
+<img class="image" src="https://thephoca.com/wp-content/themes/woctheme/assets/images/loading.gif" >
+<div class="flex-conatiner">
+    <div class="flex-button"><a style="text-decoration: none;color:white" href="Mainpage.html">Home</a></div>
+        <div class="flex-button"style ="font-style:Times New Roman;"><a style="text-decoration: none;color:white" href="2ndpage.html">Categories</a></div>
+        <div class="flex-button"style ="font-style:Times New Roman;"><a style="text-decoration: none;color:white" href="aboutus.html">About Us</a></div>
+        <div class="flex-button" style ="font-style:Times New Roman;"><a style="text-decoration: none;color:white" href="contactus.html">Contact Us</a></div>
+</div>
+</header>
+<main><!--changes eed to be done here-->
+<h2>
+<span>M</span>
+<span>a</span>
+<span>n</span>
+<span>g</span>
+<span>o</span>
+<span></span>
+<span>P</span>
+<span>i</span>
+<span>c</span>
+<span>k</span>
+<span>l</span>
+<span>e</span>
+</h2>
+<div class="amla">
+    <img src="https://1.bp.blogspot.com/--J3xWVGhUOo/WQllp3O2_aI/AAAAAAAAOH0/g3u6tk1-FFk-MJMSGFonqvAzo3CAfhB3QCLcB/s1600/Aavakkai%2BOorugai..jpg" width="800px"></div>
+</div>
+<div class="flex-container">
+<div class="ingredients">
+    <h3>Ingredients:</h3>
+    <p>Mangoes:2kgs</p>
+    <p>Red Chilli Powder:50grms</p>
+    <p>Salt:250grms</p>
+    <p>Turmeric Powder:2tbsp</p>
+    <p>Mustard Seeds:200grms</p>
+    <p>Fenugreek Seeds:50grms</p>
+    <p>Coriander Leaves:1/2 hand</p>
+    <p>Garlic:300grms</p>
+    <p>Groundnut Oil:1ltr</p>
+</div>
+<div class="Preparation">
+    <ul style="list-style-type: 1;">
+        <h3>Preparation:</h3>
+        <p>Firstly,clean the mangoes</p>
+        <p>and dry them and make sure that there is no wet.</p> 
+        <p>Remove the cover which is on the mango kernel(mamidi tenka)</p>
+        <p>Remove the cover of the garlics</p>
+        <p>and smash them as a paste</p>
+        <p>After that remove the dirt or any stones if present in</p>
+        <p>Mustard seeds and Fenugreek seed.</p>
+        <p>After that heat the seeds in a low flame seperately,</p> 
+        <p>and cool them and mix them as a powder.</p>
+        <p>After that,take a bowl and add the mango pieces into that.</p>
+        <p>Add add the fenugreek powder,mustard powder,garlic paste,</p>
+        <p>Add turmeric powder,redchilli podwder,salt into the bowl</p> 
+        <p>and mix them well.</p>
+        <p>After that pour some oil until they mix well.</p>
+        <p>and keep the mix aside for two days.</p>
+        <p>After two days,pour some oil and mix well.</p>
+        <p>and put the pickle in a jar</p>
+    </ul>
+</div>
+    <h4>References:</h4>
+    <div class="ref1">
+        <h5>Reference 1</h5>
+        <!--<iframe width="480" height="300" src="https://www.youtube.com/watch?v=onP3cjNRbNY&pp=ygUdbWFuZ28gcGlja2xlIHJlY2lwZSBpbiB0ZWx1Z3U%3D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+        <iframe width="480" height="300" src="https://www.youtube.com/embed/onP3cjNRbNY?si=quuMmKSiB5wovB34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <!--<div class="ref2">
+        <a href="https://youtu.be/3bZ6r5W4sDk?si=uOumc0FDRo0YPjaI" name="reference2"><h3>Reference 2</h3></a>
+    </div>-->
+    <div class="ref2">
+        <h5>Reference 2</h5>
+        <iframe width="480" height="300" src="https://www.youtube.com/embed/YOUbQt9yMjg?si=IEWGjv5c0onM-znP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div> 
+    <div class="comment">
+        <form>
+            <h5>First Name</h5>
+            <input type="text" placeholder="Enter your name" required size="20">
+            <h5>Email</h5>
+            <input type="email" placeholder="Enter your email" required size="20">
+            <h5>Your Comment</h5>
+            <input type="text" placeholder="Your comments" required height="5" size="40">
+            <p></p>
+            <button class="submit" type="submit">Send</button>
+        </form>
+    </div> 
+</main>
+<footer> 
+    &copy; 2023 Food fusion.com
+</footer>
+</body>
+</html>
